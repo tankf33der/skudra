@@ -17,7 +17,7 @@ $ ldconfig -p | grep monocypher
 ```
 $ pil dirtree.lv /home/user/skudra-root
 ```
-* modify *ServRoot, *DirRoot and *KBLimit as file size limit
+* modify *ServRoot, *DirRoot and *KBLimit as file size limit in [pastebin.l]
 * modify index.txt
 * you could choose run nginx before pil
 * start PicoLisp
