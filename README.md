@@ -4,5 +4,6 @@ pastebin service on PicoLisp.
 * PicoLisp web framework
 * Small memory footprint
 * multi directory hierarchy
-* Blake2b hash for uniqueness ([Monocypher](https://monocypher.org) library via mmap syscall)
+* Blake2b hash for uniqueness ([Monocypher](https://monocypher.org) library
+via [mmap](https://en.wikipedia.org/wiki/Mmap) syscall)
 
