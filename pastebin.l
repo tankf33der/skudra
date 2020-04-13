@@ -1,6 +1,29 @@
+`(== 64 64)
 (setq
    *ServRoot "http://127.0.0.1:8080/"
-   *DirRoot "/home/mpech/skudra-root/" )
+   *DirRoot "/home/mpech/skudra-root/"
+   *KBLimit (* 256 1024) )
+(de mmap (L F)
+   (native "@" "mmap" 'N 0 L 1 2 F 0) )
+(de munmap (A L)
+   (native "@" "munmap" 'N A L) )
+(de blake (M S)
+   (use R
+      (native
+         "libmonocypher.so"
+         "crypto_blake2b_general"
+         NIL
+         (cons 'R (cons (cons 4 'B 4)))
+         4
+         0
+         0
+         M
+         S )
+      (lowc
+         (pack
+            (mapcar
+               '((B) (pad 2 (hex B)))
+               R ) ) ) ) )
 (de sendfile (F)
    (httpHead "text/plain; charset=utf-8")
    (ht:Out *Chunked (in (pack *DirRoot F) (echo))) )
@@ -14,7 +37,20 @@
             "/"
             F ) ) ) )
 (if *Post
-   NIL
+   (let F (get 'f 'http)
+      (ifn F
+         (respond "Wrong\n")
+         (let
+            (F (tmp F)
+               S (car (info F))
+               D (open F T)
+               M (mmap S D)
+               H (blake M S) )
+            (munmap M S)
+            (close D)
+            (unless (info (pack *DirRoot (fullname H)))
+               (call 'mv F (pack *DirRoot (fullname H))) )
+            (respond (pack *ServRoot "?" H "\n")) ) ) )
    (let P (next)
       (ifn P
          (sendfile "index.txt")
