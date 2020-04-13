@@ -15,7 +15,7 @@ $ ldconfig -p | grep monocypher
 ```
 * select directory root
 ```
-$ pil dirtree.lv /home/user/skudra-root
+$ pil dirtree.l /home/user/skudra-root
 ```
 * modify *ServRoot, *DirRoot and *KBLimit as file size limit in [pastebin.l](pastebin.l)
 * modify index.txt if you want, copy it to *DirRoot
