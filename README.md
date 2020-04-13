@@ -29,3 +29,7 @@ $ nohup pil @lib/http.l @lib/xhtml.l @lib/form.l --server 8080 pastebin.l &
 ```
 $ killall picolisp
 ```
+* setup cron job to delete older pastes
+```
+find /home/user/skudra-root -type f -mtime +30 -exec rm -f {} \;
+```
