@@ -43,14 +43,20 @@
          (let
             (F (tmp F)
                S (car (info F))
-               D (open F T)
-               M (mmap S D)
-               H (blake M S) )
-            (munmap M S)
-            (close D)
-            (unless (info (pack *DirRoot (fullname H)))
-               (call 'mv F (pack *DirRoot (fullname H))) )
-            (respond (pack *ServRoot "?" H "\n")) ) ) )
+               D NIL
+               M NIL
+               H NIL )
+            (if (or (> 1 S) (> S *KBLimit))
+               (respond "Wrong size\n")
+               (setq
+                  D (open F T)
+                  M (mmap S D)
+                  H (blake M S) )
+               (munmap M S)
+               (close D)
+               (unless (info (pack *DirRoot (fullname H)))
+                  (call 'mv F (pack *DirRoot (fullname H))) )
+               (respond (pack *ServRoot "?" H "\n")) ) ) ) )
    (let P (next)
       (ifn P
          (sendfile "index.txt")
