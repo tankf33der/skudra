@@ -1,5 +1,3 @@
-pastebin service on PicoLisp.
-
 ### Key features
 * PicoLisp web [framework](http://software-lab.de/doc/app.html)
 * Small memory footprint
