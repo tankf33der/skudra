@@ -1,1 +1,11 @@
 Pastebin service for sharing code, notes and snippets.
+
+Share code:
+// send file
+$ curl -F 'f=@/etc/issue' 127.0.0.1:8080
+http://127.0.0.1:8080/?116cffe7
+
+// send output
+$ ip a | curl -F 'f=@-;' 127.0.0.1:8080
+http://127.0.0.1:8080/?02cddfd
+

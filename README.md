@@ -13,4 +13,20 @@ $ ldconfig -p | grep monocypher
     libmonocypher.so.3 (libc6,x86-64) => /usr/local/lib/libmonocypher.so.3
     libmonocypher.so (libc6,x86-64) => /usr/local/lib/libmonocypher.so
 ```
-*
+* select directory root
+```
+$ pil dirtree.lv /home/user/skudra-root
+```
+* modify *ServRoot, *DirRoot and *KBLimit as file size limit
+* modify index.txt
+* you could choose run nginx before pil
+* start PicoLisp
+```
+$ nohup pil @lib/http.l @lib/xhtml.l @lib/form.l --server 8080 pastebin.l &
+[1] 618124
+```
+* to kill daemon
+```
+$ killall picolisp
+```
+
