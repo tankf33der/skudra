@@ -20,7 +20,7 @@ $ pil dirtree.lv /home/user/skudra-root
 * modify *ServRoot, *DirRoot and *KBLimit as file size limit in [pastebin.l](pastebin.l)
 * modify index.txt if you want, copy it to *DirRoot
 * you could choose run nginx before pil
-* start PicoLisp
+* start PicoLisp manually or setup [runit](http://smarden.org/runit/) or systemd
 ```
 $ nohup pil @lib/http.l @lib/xhtml.l @lib/form.l --server 8080 pastebin.l &
 [1] 618124
