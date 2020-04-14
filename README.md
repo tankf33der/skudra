@@ -20,11 +20,12 @@ $ ldconfig -p | grep monocypher
 $ pil dirtree.l /home/user/skudra-root
 ```
 * modify *ServRoot, *DirRoot and *KBLimit as file size limit in [pastebin.l](pastebin.l)
+* port number of (server) call as last line of pastebin.l should be equal to *ServRoot's port
 * modify index.txt if you want, copy it to *DirRoot
 * you could choose run nginx before pil
 * start PicoLisp manually or setup [runit](http://smarden.org/runit/) or systemd
 ```
-$ nohup pil @lib/http.l @lib/xhtml.l @lib/form.l --server 8080 pastebin.l &
+$ nohup pil pastebin.l &
 [1] 618124
 ```
 * to kill daemon
