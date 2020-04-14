@@ -3,6 +3,7 @@
 * Small memory footprint
 * multi directory hierarchy
 * Limit maximum file size
+* Support for texts only
 * Blake2b hash for uniqueness ([monocypher](https://monocypher.org) library
 via [mmap](https://en.wikipedia.org/wiki/Mmap) syscall)
 
