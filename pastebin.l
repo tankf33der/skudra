@@ -1,6 +1,6 @@
 `(== 64 64)
 (load "@lib/http.l" "@lib/xhtml.l" "@lib/form.l")
-(allow NIL "!pastebin")
+(allowed NIL "!pastebin" f)
 (setq
    *ServRoot "http://127.0.0.1:8080/"
    *DirRoot "/home/mpech/skudra-root/"
@@ -38,7 +38,7 @@
             (cut 2 'F)
             "/"
             F ) ) ) )
-(de pastebin NIL
+(de pastebin @
    (if *Post
       (let F (get 'f 'http)
          (ifn F
