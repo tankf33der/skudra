@@ -1,4 +1,6 @@
 `(== 64 64)
+(load "@lib/http.l" "@lib/xhtml.l" "@lib/form.l")
+(allow NIL "!pastebin")
 (setq
    *ServRoot "http://127.0.0.1:8080/"
    *DirRoot "/home/mpech/skudra-root/"
@@ -36,31 +38,34 @@
             (cut 2 'F)
             "/"
             F ) ) ) )
-(if *Post
-   (let F (get 'f 'http)
-      (ifn F
-         (respond "Wrong\n")
-         (let
-            (F (tmp F)
-               S (car (info F))
-               D NIL
-               M NIL
-               H NIL )
-            (if (or (> 1 S) (> S *KBLimit))
-               (respond "Wrong size\n")
-               (setq
-                  D (open F T)
-                  M (mmap S D)
-                  H (blake M S) )
-               (munmap M S)
-               (close D)
-               (unless (info (pack *DirRoot (fullname H)))
-                  (call 'mv F (pack *DirRoot (fullname H))) )
-               (respond (pack *ServRoot "?" H "\n")) ) ) ) )
-   (let P (next)
-      (ifn P
-         (sendfile "index.txt")
-         (let P (fullname P)
-            (if (and P (info (pack *DirRoot P)))
-               (sendfile P)
-               (http404) ) ) ) ) )
+(de pastebin NIL
+   (if *Post
+      (let F (get 'f 'http)
+         (ifn F
+            (respond "Wrong\n")
+            (let
+               (F (tmp F)
+                  S (car (info F))
+                  D NIL
+                  M NIL
+                  H NIL )
+               (if (or (> 1 S) (> S *KBLimit))
+                  (respond "Wrong size\n")
+                  (setq
+                     D (open F T)
+                     M (mmap S D)
+                     H (blake M S) )
+                  (munmap M S)
+                  (close D)
+                  (unless (info (pack *DirRoot (fullname H)))
+                     (call 'mv F (pack *DirRoot (fullname H))) )
+                  (respond (pack *ServRoot "?" H "\n")) ) ) ) )
+      (let P (next)
+         (ifn P
+            (sendfile "index.txt")
+            (let P (fullname P)
+               (if (and P (info (pack *DirRoot P)))
+                  (sendfile P)
+                  (http404) ) ) ) ) ) )
+(server 8080 "!pastebin")
+(wait)
