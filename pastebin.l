@@ -1,5 +1,5 @@
 `(== 64 64)
-(load "@lib/http.l" "@lib/xhtml.l" "@lib/form.l")
+(load "@lib/http.l")
 (allowed NIL "!pastebin" f)
 (setq
    *ServRoot "http://127.0.0.1:8080/"
