@@ -34,7 +34,7 @@ $ killall picolisp
 ```
 * setup cron job to delete older pastes
 ```
-find /home/user/skudra-root -type f -mtime +30 -exec rm -f {} \;
+find /home/user/skudra-root -type f -not -name "*.txt" -mtime +30 -exec rm -f {} \;
 ```
 
 ### Default index message
