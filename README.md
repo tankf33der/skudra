@@ -50,7 +50,7 @@ http://127.0.0.1:8080/?116cff
 $ ip a | curl -F 'f=@-;' 127.0.0.1:8080
 http://127.0.0.1:8080/?02cddf
 
-o) Pastes will be deleted via cron job
+o) Pastes will be deleted via cron job monthly
 
 o) No more features, you should definitely check similar services:
 http://ix.io/
