@@ -25,7 +25,7 @@ $ pil dirtree.l /home/user/skudra-root
 * you could choose run nginx before pil
 * start PicoLisp manually or setup [runit](http://smarden.org/runit/) or systemd
 ```
-$ nohup pil pastebin.l &
+$ nohup pil /home/user/skudra/pastebin.l > /dev/null &
 [1] 618124
 ```
 * to kill daemon
