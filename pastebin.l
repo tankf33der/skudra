@@ -15,8 +15,8 @@
          "libmonocypher.so"
          "crypto_blake2b_general"
          NIL
-         (cons 'R (cons (cons 4 'B 4)))
-         4
+         (cons 'R (cons (cons 3 'B 3)))
+         3
          0
          0
          M
@@ -31,7 +31,7 @@
    (ht:Out *Chunked (in (pack *DirRoot F) (echo))) )
 (de fullname (F)
    (let F (chop F)
-      (when (= 8 (length F))
+      (when (= 6 (length F))
          (pack
             (cut 2 'F)
             "/"
