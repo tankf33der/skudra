@@ -41,19 +41,20 @@ find /home/user/skudra-root -type f -mtime +30 -exec rm -f {} \;
 ```
 Welcome to pastebin service for sharing code, notes and snippets.
 
-
 o) Share pastes:
 // send file
 $ curl -F 'f=@/etc/issue' 127.0.0.1:8080
-http://127.0.0.1:8080/?116cffe7
+http://127.0.0.1:8080/?116cff
 
 // send output via pipe
 $ ip a | curl -F 'f=@-;' 127.0.0.1:8080
-http://127.0.0.1:8080/?02cddfd
+http://127.0.0.1:8080/?02cddf
 
 o) Pastes will be deleted via cron job
 
 o) No more features, you should definitely check similar services:
 http://ix.io/
 http://0x0.st/
+
+o) Contact: mpech@envs.net
 ```
