@@ -51,6 +51,4 @@ $ ip a | curl -F 'f=@-;' 127.0.0.1:8080
 http://127.0.0.1:8080/?02cddf
 
 o) Pastes will be deleted via cron job monthly
-
-o) Contact: mpech@envs.net
 ```
