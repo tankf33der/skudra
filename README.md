@@ -52,9 +52,5 @@ http://127.0.0.1:8080/?02cddf
 
 o) Pastes will be deleted via cron job monthly
 
-o) No more features, you should definitely check similar services:
-http://ix.io/
-http://0x0.st/
-
 o) Contact: mpech@envs.net
 ```
