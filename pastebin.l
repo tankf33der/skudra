@@ -49,7 +49,7 @@
                   D NIL
                   M NIL
                   H NIL )
-               (if (or (> 1 S) (> S *KBLimit))
+               (if (> S *KBLimit)
                   (respond "Wrong size\n")
                   (setq
                      D (open F T)
