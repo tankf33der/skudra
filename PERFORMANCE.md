@@ -1,6 +1,6 @@
 ```
 $ wrk -t12 -c400 -d30s http://127.0.0.1:8080/?d1e7bf
-Running 30s test @ http://127.0.0.1:8080/?d0eebf
+Running 30s test @ http://127.0.0.1:8080/?d1e7bf
   12 threads and 400 connections
   Thread Stats   Avg      Stdev     Max   +/- Stdev
     Latency     8.30ms   69.11ms   1.89s    97.89%
