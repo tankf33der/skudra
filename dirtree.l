@@ -1,4 +1,3 @@
-`(== 64 64)
 (de dirpath (A B)
    (list
       (lowc (pad 2 (hex A)))

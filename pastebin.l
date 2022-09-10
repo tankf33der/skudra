@@ -1,4 +1,3 @@
-`(== 64 64)
 (load "@lib/http.l")
 (allowed NIL "!pastebin" f)
 (setq
