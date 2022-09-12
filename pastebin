@@ -12,6 +12,7 @@ start() {
 	ebegin "Starting pastebin"
 	start-stop-daemon --background --start --quiet \
 		--exec "${command}" \
+		--make-pidfile \
 		--pidfile "${pidfile}" \
  		-- /root/skudra/pastebin.l
 	eend $? "Failed to start pastebin"
@@ -19,6 +20,6 @@ start() {
 
 stop() {
 	ebegin "Stopping pastebin"
-	start-stop-daemon --stop --queit --pidfile "${pidfile}"
+	start-stop-daemon --stop --quiet --pidfile "${pidfile}"
 	eend $? "Failed to stop pastebin"
 }
