@@ -48,4 +48,6 @@ http://127.0.0.1:8080/?116cff
 # send output via pipe
 $ ip a | curl -F 'f=@-;' 127.0.0.1:8080
 http://127.0.0.1:8080/?02cddf
+
+Max file size is 128KB
 ```

@@ -1,9 +1,9 @@
 (load "@lib/http.l")
 (allowed NIL "!pastebin" f)
 (setq
-   *ServRoot "http://127.0.0.1:8080/"
+   *ServRoot "http://pb1n.de/"
    *DirRoot "/home/mpech/skudra-root/"
-   *KBLimit (* 256 1024) )
+   *KBLimit (* 128 1024) )
 (de mmap (L F)
    (native "@" "mmap" 'N 0 L 1 2 F 0) )
 (de munmap (A L)
