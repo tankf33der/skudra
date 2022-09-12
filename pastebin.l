@@ -66,5 +66,5 @@
                (if (and P (info (pack *DirRoot P)))
                   (sendfile P)
                   (http404) ) ) ) ) ) )
-(server 8080 "!pastebin")
+(server 80 "!pastebin")
 (wait)
