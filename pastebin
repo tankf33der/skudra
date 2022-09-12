@@ -1,0 +1,24 @@
+#!/sbin/openrc-run
+
+command="/root/pil21/pil"
+description="pastebin"
+pidfile="/var/run/pastebin.pid"
+
+depend() {
+	need net
+}
+
+start() {
+	ebegin "Starting pastebin"
+	start-stop-daemon --background --start --quiet \
+		--exec "${command}" \
+		--pidfile "${pidfile}" \
+ 		-- /root/skudra/pastebin.l
+	eend $? "Failed to start pastebin"
+}
+
+stop() {
+	ebegin "Stopping pastebin"
+	start-stop-daemon --stop --queit --pidfile "${pidfile}"
+	eend $? "Failed to stop pastebin"
+}
