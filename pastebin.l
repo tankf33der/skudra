@@ -2,7 +2,7 @@
 (allowed NIL "!pastebin" f)
 (setq
    *ServRoot "http://pb1n.de/"
-   *DirRoot "/home/mpech/skudra-root/"
+   *DirRoot "/skudra-root/"
    *KBLimit (* 128 1024) )
 (de mmap (L F)
    (native "@" "mmap" 'N 0 L 1 2 F 0) )
