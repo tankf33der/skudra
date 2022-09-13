@@ -18,7 +18,7 @@
 (let
    (P (post F)
       G (format (getLine P)) )
-   (unless (= G (inc R))
+   (unless (= G R)
       (mail "localhost" 25
          "mpech@envs.net"
          "mpech@envs.net"
