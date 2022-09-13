@@ -24,6 +24,6 @@
          "mpech@envs.net"
          "putget comparison failed"
          NIL
-         (prinl P G R) ) ) )
-(msg 'ok)
+         (println P G R) )
+      (bye 1) ) )
 (bye)
