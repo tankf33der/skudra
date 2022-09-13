@@ -42,7 +42,7 @@ find /home/user/skudra-root -type f -not -name "*.txt" -mtime +30 -delete
 Welcome to pastebin service for sharing code, notes and snippets.
 
 # send file
-$ curl -F 'f=@/etc/issue' pb1n.de
+$ curl -F f=@/etc/issue pb1n.de
 http://pb1n.de/?116cff
 
 # send output via pipe
