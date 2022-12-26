@@ -1,7 +1,7 @@
 (load "@lib/http.l")
 (allowed NIL "!pastebin" f)
 (setq
-   *ServRoot "pb1n.de/"
+   *ServRoot "http://pb1n.de/"
    *DirRoot "/skudra-root/"
    *KBLimit (* 128 1024) )
 (de mmap (L F)
