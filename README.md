@@ -1,9 +1,10 @@
 ### Key features
 * PicoLisp web [framework](http://software-lab.de/doc/app.html)
 * Small memory footprint
-* multi directory hierarchy
+* Multi directory hierarchy
 * Limit maximum file size
-* Support for texts only
+* Supports for texts only
+* Replaces older notes automatically
 * Blake2b hash for uniqueness ([monocypher](https://monocypher.org) library
 via [mmap](https://en.wikipedia.org/wiki/Mmap) syscall)
 
