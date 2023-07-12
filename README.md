@@ -32,11 +32,6 @@ $ nohup pil /home/user/skudra/pastebin.l > /dev/null &
 ```
 $ killall picolisp
 ```
-* setup cron job to delete older pastes
-```
-find /home/user/skudra-root -type f -not -name "*.txt" -mtime +30 -delete
-```
-
 ### Default index message
 ```
 Welcome to pastebin service for sharing code, notes and snippets.
