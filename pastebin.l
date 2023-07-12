@@ -56,7 +56,7 @@
                      H (blake M S) )
                   (munmap M S)
                   (close D)
-                  (call 'mv F (pack *DirRoot (fullname H))) )
+                  (call 'mv F (pack *DirRoot (fullname H)))
                   (respond (pack *ServRoot "?" H "\n")) ) ) ) )
       (let P (next)
          (ifn P
