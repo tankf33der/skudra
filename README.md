@@ -4,7 +4,7 @@
 * Multi directory hierarchy
 * Limit maximum file size
 * Supports for texts only
-* Replaces older notes automatically
+* Replaces older notes automatically, no collisions
 * Blake2b hash for uniqueness ([monocypher](https://monocypher.org) library
 via [mmap](https://en.wikipedia.org/wiki/Mmap) syscall)
 
